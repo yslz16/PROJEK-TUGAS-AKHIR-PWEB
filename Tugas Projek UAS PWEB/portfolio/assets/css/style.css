@@ -1,0 +1,608 @@
+:root {
+  --gold: #ffc100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+body {
+  background-color: #191919;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f3f3;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(25, 25, 25, 0.95);
+  padding: 0 2rem;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gold);
+  transition: color 0.2s ease;
+}
+
+.navbar .logo a:hover {
+  color: #f3f3f3;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle {
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: var(--gold);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.action_btn-drop {
+  background-color: var(--gold);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.action_btn:hover {
+  background-color: #fff;
+  color: var(--gold);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  width: 300px;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+  height: 300px;
+}
+
+.dropdown-menu ul {
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu .action_btn-drop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Section Banner */
+section#banner {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f3f3f3;
+  text-align: center;
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#banner h1 {
+  font-size: 3rem;
+}
+
+#banner h1 span {
+  color: var(--gold);
+}
+
+/* About */
+#about {
+  text-align: center;
+  color: #f3f3f3;
+}
+
+#about .heading {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+#about .heading span {
+  color: var(--gold);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.foto-container {
+  text-align: center;
+}
+
+.foto-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  line-height: 1.6;
+  text-align: start;
+  font-size: 0.9rem;
+}
+
+/* Product */
+#product .heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #f3f3f3;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.product-item {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-item img {
+  width: 350px;
+  height: 250px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Review Section */
+#review {
+  padding: 50px 20px;
+}
+
+#review .heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #f3f3f3;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.review-item {
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
+  color: #f3f3f3;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.title {
+  color: var(--gold);
+}
+
+.review-item img {
+  width: 100%;
+  height: 200px;
+}
+
+.review-content {
+  padding: 20px;
+}
+
+.review-content h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.stars {
+  color: #ffcd3c;
+}
+
+.review-content p {
+  font-size: 1em;
+  color: #f3f3f3;
+}
+
+/* Form Review */
+.form-container {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  color: #f3f3f3;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.form-group,
+.form-group-full {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label,
+.form-group-full label {
+  flex: 0 0 150px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #f3f3f3;
+}
+
+.form-group input[type='text'],
+.form-group input[type='file'],
+.form-group input[type='number'],
+.form-group-full textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #191919;
+  color: #f3f3f3;
+}
+
+.form-group-full {
+  display: block;
+}
+
+.form-group-full textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.form-container button {
+  background-color: var(--gold);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.form-container button:hover {
+  background-color: #e6b635;
+}
+
+/* Contact */
+#contact {
+  padding: 50px 20px;
+  background-color: #333;
+}
+
+#contact .heading {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #f3f3f3;
+}
+
+#contact .heading {
+  color: #f3f3f3;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.contact-info h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #f3f3f3;
+}
+
+.contact-info p {
+  font-size: 1em;
+  color: #f3f3f3;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  font-size: 1em;
+  color: #f3f3f3;
+  margin-bottom: 10px;
+}
+
+.contact-info ul li i {
+  color: #ffcd3c;
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #ffcd3c;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #e6b635;
+}
+
+/* Style for Akademik Section */
+#akademik {
+  padding: 50px 20px;
+  background-color: #191919;
+  color: #f3f3f3;
+}
+
+#akademik .heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #f3f3f3;
+}
+
+#akademik .heading span {
+  color: var(--gold);
+}
+
+.akademik-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.pendidikan-formal,
+.prestasi-akademik {
+  width: 100%;
+  max-width: 600px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pendidikan-formal h2,
+.prestasi-akademik h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.pendidikan-formal ul,
+.prestasi-akademik ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pendidikan-formal li,
+.prestasi-akademik li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #f3f3f3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle {
+    display: block;
+  }
+
+  .dropdown-menu {
+    top: 60px;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+  .content p {
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .product-item img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .form-group,
+  .form-group-full {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label,
+  .form-group-full label {
+    margin-bottom: 5px;
+    flex: none;
+  }
+
+  .form-group input[type='text'],
+  .form-group input[type='file'],
+  .form-group input[type='number'],
+  .form-group-full textarea {
+    width: 100%;
+  }
+  .akademik-container {
+    padding: 20px;
+  }
+
+  .pendidikan-formal,
+  .prestasi-akademik {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    top: 60px;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
